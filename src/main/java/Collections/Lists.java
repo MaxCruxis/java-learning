@@ -15,12 +15,19 @@ public class Lists {
         list.add(213);
         list.add(31);
         list.add(31);
+        list.add(3);
+        list.add(3);
         list.add(56);
         list.add(9);
         list.add(3);
         list.add(3);
         list.add(3);
         list.add(3);
+        System.out.println(list);
+        list.remove(3);// remove value by index
+        System.out.println(list);
+        list.remove(Integer.valueOf(3)); //remove first founded value by condition
+        System.out.println(list);
         Collections.addAll(list, 3,4,5,6,7,8,9);
         Collections.replaceAll(list,3,14);
         System.out.println("Linked list:");
