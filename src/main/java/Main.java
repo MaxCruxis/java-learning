@@ -1,10 +1,8 @@
-import Collections.Lists;
+import java.util.Scanner;
 
-import java.util.Arrays;
-
-public class Main  {
+public class Main {
     public static void main(String[] args) {
-        System.out.println("hello buddy");
+       /* System.out.println("hello buddy");
         Lists lists = new Lists();
         lists.arrayList();
 
@@ -18,7 +16,36 @@ public class Main  {
         System.out.println(Arrays.toString(strings));
         Arrays.sort(strings, 2, 6);
         System.out.println(Arrays.toString(strings));
-        lists.linkedList();
+        lists.linkedList();*/
+        /*Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int fZero = 0;
+        int fOne = 1;
+        int fN=1;
+            for (int i = 2; i <= x; i++) {
+                fN = (fZero + fOne)%10;
+                fZero = fOne%10;
+                fOne = fN%10;
+            }
+            System.out.println(fN);*/
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        /*int x = 18;
+        int y = 435345;*/
+        while (x != y && x != 0 && y != 0) {
+            if (x > y) x = x % y;
+            else y = y % x;
+        }
+        if (x==0) System.out.println(y); else System.out.println(x);
 
+
+        /*int a =10;
+        int b =1;
+        do {
+            a =a-b;
+            System.out.println(a);
+        } while (a!=1);
+        System.out.println(a);*/
     }
 }
