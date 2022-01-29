@@ -43,6 +43,7 @@ public class MyCollections {
         System.out.println(list);
 
     }
+
     private void vector() {
         Vector<Integer> vector = new Vector<>();
         vector.add(3);
@@ -58,24 +59,40 @@ public class MyCollections {
         System.out.println((int) a);
         System.out.println(b);
     }
-    private void setExploring(){
-    Set<String> set = new HashSet<>();
-    set.add("qweqwe");
-    for (int i = 10; i>=0; i--){
-        set.add(String.valueOf(i));
-    }
+
+    private void setExploring() {
+        Set<String> set = new HashSet<>();
+        set.add("qweqwe");
+        for (int i = 10; i >= 0; i--) {
+            set.add(String.valueOf(i));
+        }
         System.out.println(set);
 //    set.remove(String.valueOf(4));
-        set.removeIf(x-> x.equals(String.valueOf(4)));
+        set.removeIf(x -> x.equals(String.valueOf(4)));
         System.out.println(set);
-        System.out.println( set.size());
+        System.out.println(set.size());
 
+    }
+
+    private void mapExploring() {
+        Map<Integer, String> map = new HashMap<>();
+        for (int i = 0; i <= 10; i++) {
+            for (int j = 0; j <= 10; j++) {
+                char string = (char)(i+33);
+                map.put(i,Character.toString(string));
+            }
+        }
+        for (Map.Entry<Integer,String> entry: map.entrySet()){
+            System.out.println(entry.getKey()+ " " + entry.getValue());
+        }
+//        for (int i = 0; i <= 10; i++) System.out.println((char)(i+33) );
     }
 
     public static void main(String[] args) {
         new MyCollections().vector();
         new MyCollections().findChar(1);
         new MyCollections().setExploring();
+        new MyCollections().mapExploring();
     }
 
 
