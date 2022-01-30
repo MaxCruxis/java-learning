@@ -87,6 +87,17 @@ public class MyCollections {
         }
 //        for (int i = 0; i <= 10; i++) System.out.println((char)(i+33) );
     }
+    private void mapInList(){
+        Map<Integer,String> map = new HashMap<>();
+        List<Integer> keyList = new ArrayList<>(map.keySet());
+        List<String> valueList = new ArrayList<>(map.values());
+        List<Map.Entry<Integer,String>>entryList =new ArrayList<>(map.entrySet());
+        for (int i =0; i<=1000; i++){
+
+
+        }
+
+    }
 
     public static void main(String[] args) {
         new MyCollections().vector();
