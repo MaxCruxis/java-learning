@@ -148,8 +148,12 @@ public class MyCollections {
             System.out.println(entry);
         }
         Set<Integer> keys = passportsAndNames.keySet();
+        Iterator<Integer> iterator = keys.iterator();
+        while (iterator.hasNext()){
+            int x =iterator.next();
+            System.out.println(Integer.toHexString(x) + " = " + x );
+        }
 
-        System.out.println(keys);
 
     }
 
